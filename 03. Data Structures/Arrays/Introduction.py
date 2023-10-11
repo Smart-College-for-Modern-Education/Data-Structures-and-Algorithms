@@ -10,7 +10,7 @@
 #Insert - O(n)
 #Delete - O(n)
 
-array = [5,8,2,9,17,43,25,10]
+array = [5,8,2,9,17,43,25,100]
 
 #Look-up/Acces
 #Any element of an array can be accessed by its index.
