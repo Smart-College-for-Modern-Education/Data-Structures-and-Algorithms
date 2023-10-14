@@ -10,6 +10,7 @@
 #Insert - O(n)
 #Delete - O(n)
 
+<<<<<<< HEAD
 # Sum Func 
 
 
@@ -20,13 +21,15 @@ def sum(i1, i2):
     return result
 
 def main():
-    print("Sum from 1 to 10 is", sum(100, 1000)) 
+    print("Sum from 1 to 10 is", sum(100, 100)) 
     print("Sum from 20 to 37 is", sum(20, 37))
     print("Sum from 35 to 49 is", sum(35, 49))
 
 main() # Call the main function
 
 
+=======
+>>>>>>> parent of 81172df (Update Introduction.py)
 array = [5,8,2,9,17,43,25,100]
 
 #Look-up/Acces
