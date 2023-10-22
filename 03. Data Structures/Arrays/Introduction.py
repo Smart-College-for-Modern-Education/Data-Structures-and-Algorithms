@@ -10,87 +10,55 @@
 #Insert - O(n)
 #Delete - O(n)
 
-<<<<<<< HEAD
+
 # Sum Func 
 
 
-def sum(i1, i2):
-    result = 0
-    for i in range(i1, i2 + 1):
-        result += i
-    return result
+def max(num1, num2): 
+    if num1 > num2:
+        result = num1
+    else:
+        result = num2
+
+    return result # Return result
 
 def main():
-    print("Sum from 1 to 10 is", sum(100, 10)) 
-    print("Sum from 20 to 37 is", sum(20, 37))
-    print("Sum from 35 to 49 is", sum(35, 49))
+    i = 5
+    j = 2
+    k = max(i, j) # Call the max function
+    print("The maximum between", i, "and", j, "is", k)
 
-main() # Call the main function
+def nPrintln(message, n):
+    for i in range(0, n):
+        print(" Line #: ", i+1 , message) 
 
+main() 
+   
+nPrintln("Welcome to SCME.ps", 100)
 
-=======
->>>>>>> parent of 81172df (Update Introduction.py)
-array = [5,8,2,9,17,43,25,100]
+#22 Oct
 
-#Look-up/Acces
-#Any element of an array can be accessed by its index.
-#We just need to ask for the particular index of the element we are interested in and we will get the element in constant time
-first_element = array[0]  #This will return the first element of the array, in this case, 5, in O(1) time
-sixth_element = array[5]  #sixth-element = 43 Again, in O(1) time
-
-
-#Push/Pop
-#Push corresponds to pushing or adding an element at the end of the array.
-#Similarly, pop corresponds to removing the element at the end of the array.
-#Since the index of the end of the array is known, finding it and pushing or popping an element will only require O(1) time
-array.append(87) #Adds 87 at the end of the array in O(1) time
-
-#In some special cases, the append(push) operation may take greater time. This is because as mentioned earlier, Python has dynamic arrays
-#So when an element is to appended and the array is filled, the entire array has to be copied to a new location
-#With more space allocated(generally double the space) this time so that more items can be appended.
-#Therefore, some individual operations may reuire O(n) time or greater, but when averaged over a large number of operations,
-#The complexity can be safely considered to be O(1)
-
-array.pop() #Pops/removes the element at the end of the array in O(1) time.
-
-print(array)
+print("session ss Oct 2023")
 
 
-#Insert
-#Insert operation inserts an element at the beginning of the array, or at any location specified.
-#This is O(n) operation since after inserting the element at the desired location,
-#The elements to the right of the array have to be updated with the correct index as they all have shifted by one place.
-#This requires looping through the array. Hence, O(n) time.
-array.insert(0,50) #Inserts 50 at the beginning of the array and shifts all other elements one place towards right. O(n)
-array.insert(4,0) #inserts '0' at index '4', thus shifting all elements starting from index 4 one place towards right. O(n)
+def printArea(width = 1, height = 2):
+    area = width * height
+    print("width:", width, "\theight:", height, "\tarea:", area)
 
-print(array)
+printArea() # Default arguments width = 1 and height = 2
+printArea(4, 2.5) # Positional arguments width = 4 and height = 2.5
+printArea(height = 5, width = 3) # Keyword arguments width 
+printArea(width = 1.2) # Default height = 2
+printArea(height = 6.2) # Default widht = 1
 
+#returne Multi Value 
 
-#Delete
-#Similar to insert, it deletes an element from the specified location in O(n) time
-#The elements to the right of the deleted element have to shifted one space left, which requires looping over the entire array
-#Hence, O(n) time complexity
-array.pop(0) #This pops the first element of the array, shifting the remaining elements of the array one place left. O(n)
-print(array)
-array.remove(17) #This command removes the first occurence of the element 17 in the array, for which it needs to traverse the entire array, which requires O(n) time
-print(array)
-del array[2:4] #This command deletes elements from position 2 to position 4, again, in O(n) time
-print(array)
+def sort(number1, number2):
+    if number1 < number2:
+        return number1, number2
+    else:
+        return number2, number1
 
-array.insert(11, 'shushrut')
-print(array)
-print("-"*100)
-
-l = [5,8,2,9,17,43,25,10]
-print(len)
-l.insert(9, "shushrut")
-len = len(l)
-print(len)
-
-
-a = 15
-b = 15
-c = 300
-d = 300
-print(a is b, c is d)
+n1, n2 = sort(3, 2)
+print("n1 is", n1)
+print("n2 is", n2)
