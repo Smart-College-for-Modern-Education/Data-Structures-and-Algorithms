@@ -10,14 +10,8 @@
 #Insert - O(n)
 #Delete - O(n)
 
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Toolkit;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import java.util.Random;
-import java.awt.FontMetrics;
+import string
+import random
 # Sum Func 
 
 
@@ -71,4 +65,10 @@ n1, n2 = sort(3, 2)
 print("n1 is", n1)
 print("n2 is", n2)
 print ("SugPassword:")
-print(getRandomCharacter('A', 'Z'),getRandomCharacter('a', 'z'),getRandomCharacter('A', 'Z'),getRandomCharacter('0', '9'),getRandomCharacter('A', 'Z'))
+
+randomLetter1 = random.choice(string.ascii_letters)
+randomLetter2 = random.choice(string.ascii_uppercase)
+randomLetter3 = random.choice(string.letters)
+
+print(randomLetter1+randomLetter1+randomLetter3) 
+#print(getRandomCharacter('A', 'Z'),getRandomCharacter('a', 'z'),getRandomCharacter('A', 'Z'),getRandomCharacter('0', '9'),getRandomCharacter('A', 'Z'))
