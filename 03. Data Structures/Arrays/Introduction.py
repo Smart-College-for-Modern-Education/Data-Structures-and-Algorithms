@@ -35,7 +35,7 @@ def nPrintln(message, n):
 
 main() 
    
-nPrintln("Welcome to SCME.ps", 100)
+nPrintln("Welcome to SCME.ps", 10)
 
 
 
@@ -47,11 +47,11 @@ def printArea(width = 1, height = 2):
     area = width * height
     print("width:", width, "\theight:", height, "\tarea:", area)
 
-printArea() # Default arguments width = 1 and height = 2
-printArea(4, 2.5) # Positional arguments width = 4 and height = 2.5
-printArea(height = 5, width = 3) # Keyword arguments width 
-printArea(width = 1.2) # Default height = 2
-printArea(height = 6.2) # Default widht = 1
+
+def hashfun():
+    string = "Hello, World!"
+hash_value = hash(string)
+print("The hash value of", string," is " ,hash_value)
 
 #returne Multi Value 
 
@@ -66,9 +66,57 @@ print("n1 is", n1)
 print("n2 is", n2)
 print ("SugPassword:")
 
-randomLetter1 = random.choice(string.ascii_letters)
+randomLetter1 = random.choice(string.ascii_uppercase)
 randomLetter2 = random.choice(string.ascii_uppercase)
-randomLetter3 = random.choice(string.letters)
+randomLetter3 = random.choice(string.digits)
+randomLetter4 = random.choice(string.hexdigits)
 
-print(randomLetter1+randomLetter1+randomLetter3) 
+
+print(randomLetter1+randomLetter2+randomLetter3+randomLetter4+randomLetter2+randomLetter3) 
 #print(getRandomCharacter('A', 'Z'),getRandomCharacter('a', 'z'),getRandomCharacter('A', 'Z'),getRandomCharacter('0', '9'),getRandomCharacter('A', 'Z'))
+
+x =int( input("add your value"))
+list1 = [2, 4, 6]
+list2 = [1, 3, 7]
+if x==1:
+    list3 = list1 + list2
+    print(list3)
+if x==2:
+    list3 = 2 * list2
+    print(list3)
+if x==3:
+    list3 = list1 + list2
+    print(list3)
+    print(list3[2:4])
+if x==4:
+    list3 = 5* list1
+    print(list3)
+    print(list3[-3])
+    if (2 in list3):
+        print("2 Found in list 3")
+    languages = ['Python', 'Swift', 'C++']
+    print('C' in languages)    # False
+    print('Python' in languages)    # True
+
+if x==5:
+    list3 = [21, 34, 54, 12]
+    print("Before Append:", list3)
+    list3.append(32)
+    print("After Append:", list3)
+if x==6:
+    list3 = list1 + list2
+    print(list3)
+    i = 0
+    while i < len(list3):
+        print(list3[i])
+        i += 1
+if x==7:
+    items = "Welcome to the SCME".split() 
+    print(items)
+    items = "34#13#78#45".split("#")
+    print(items)
+
+else:
+    print("Error! Try Again....")
+
+
