@@ -14,6 +14,32 @@ import string
 import random
 # Sum Func 
 
+def add(x, lst = []):
+    if x not in lst:
+        lst.append(x)
+        
+    return lst
+
+def ListAppend():
+    list1 = add(1)
+    print(list1)
+
+    list2 = add(2)
+    print(list2)
+
+    list3 = add(3, [11, 12, 13, 14])
+    print(list3)
+
+    list4 = add(4)
+    print(list4)
+
+def count(s, c) :
+    res = 0
+    for i in range(len(s)) :
+        # Checking character in string
+        if (s[i] == c):
+            res = res + 1
+    return res
 
 def max(num1, num2): 
     if num1 > num2:
@@ -74,7 +100,9 @@ randomLetter4 = random.choice(string.hexdigits)
 
 print(randomLetter1+randomLetter2+randomLetter3+randomLetter4+randomLetter2+randomLetter3) 
 #print(getRandomCharacter('A', 'Z'),getRandomCharacter('a', 'z'),getRandomCharacter('A', 'Z'),getRandomCharacter('0', '9'),getRandomCharacter('A', 'Z'))
-
+print("1: Python List Methods\n 2: Python List index \n 3:Python List append \n Python List extend")
+print("Python List insert \n Python List remove \n Python List count \n Python List pop")
+print(" Python List reverse\n Python List sort \n Python List copy \n Python List clear")
 x =int( input("add your value"))
 list1 = [2, 4, 6]
 list2 = [1, 3, 7]
@@ -104,17 +132,35 @@ if x==5:
     list3.append(32)
     print("After Append:", list3)
 if x==6:
+    list1 = [2, 4, 6]
+    list2 = [1, 3, 7]
     list3 = list1 + list2
     print(list3)
     i = 0
     while i < len(list3):
         print(list3[i])
         i += 1
+
+    print("List 1 before copy.... ", list1)
+    list1=list3
+    print("List 1 After copy.... ", list1)
+
 if x==7:
     items = "Welcome to the SCME".split() 
     print(items)
     items = "34#13#78#45".split("#")
     print(items)
+if x==8:
+    # reverse the order of list elements
+    list3 = [2, 3, 5, 7]
+    list3.reverse()
+    print('Reversed List:', list3)
+if x==9:
+    ListAppend()
+if x==10:
+    str= input("add text to search text: ")
+    c = input("add character to search count within the text you add: ")
+    print(count(str, c))
 
 else:
     print("Error! Try Again....")
