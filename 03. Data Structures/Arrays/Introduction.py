@@ -41,6 +41,18 @@ def count(s, c) :
             res = res + 1
     return res
 
+# The function for sorting elements in ascending order 
+def selectionSort(lst):
+    for i in range(len(lst) - 1):
+        # Find the minimum in the lst[i : len(lst)]
+        currentMin = min(lst[i : ])
+        currentMinIndex = i + lst[i: ].index(currentMin)
+        
+        # Swap lst[i] with lst[currentMinIndex] if necessary
+        if currentMinIndex != i:
+            lst[currentMinIndex], lst[i] = lst[i], currentMin
+
+
 def max(num1, num2): 
     if num1 > num2:
         result = num1
@@ -161,6 +173,11 @@ if x==10:
     str= input("add text to search text: ")
     c = input("add character to search count within the text you add: ")
     print(count(str, c))
+if x==11:
+    input_list = input('Enter elements of a list separated by space \n')
+    user_list = input_list.split()
+    selectionSort(user_list)
+    print (user_list) 
 
 else:
     print("Error! Try Again....")
