@@ -51,7 +51,80 @@ def selectionSort(lst):
         # Swap lst[i] with lst[currentMinIndex] if necessary
         if currentMinIndex != i:
             lst[currentMinIndex], lst[i] = lst[i], currentMin
+def twoDimentionList():
+    distances = [
+        [0, 983, 787, 714, 1375, 967, 1087],
+        [983, 0, 214, 1102, 1763, 1723, 1842],
+        [787, 214, 0, 888, 1549, 1548, 1627],
+        [714, 1102, 888, 0, 661, 781, 810],
+        [1375, 1763, 1549, 661, 0, 1426, 1187],
+        [967, 1723, 1548, 781, 1426, 0, 239],
+        [1087, 1842, 1627, 810, 1187, 239, 0]
+                ]
+    print ("List Orginal ", distances)
+    
+#Read Table Data which include number of Rows & Colum
+def ReadTableData():
+    matrix = [] # Create an empty list
+    numberOfRows = eval(input("Enter the number of rows: "))
+    numberOfColumns = eval(input("Enter the number of columns: "))
+    for row in range(0, numberOfRows): 
+        matrix.append([]) # Add an empty new row 
+        for column in range(0, numberOfColumns): 
+            print("Row#",row+1 , " Cloumn# " , column+1)
+            value = eval(input("Enter an element and press Enter: " ))
+            matrix[row].append(value) 
+    print(matrix) 
+    print()
+def ReadTableDatak():
+    matrix=[]
+    NumOfRows=eval(input("Enter the number of rows : "))
+    NumOfcols=eval(input("Enter the number of cols : "))
 
+    for row in range(0,NumOfRows):
+        matrix.append([])
+        for Cols in range(0,NumOfcols):
+            print("Row#",row+1 , " Cloumn# " , column+1)
+            value=eval(input("Enter the element and enter "))
+            matrix[row].append(value)
+    print(matrix)
+
+def SumTable():
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]] # Assume a list is given
+    total = 0
+    for row in range(0, len(matrix)): 
+        for column in range(0, len(matrix[row])): 
+            total += matrix[row][column]
+
+    print("Total is " + str(total)) # Print the total  
+
+    print(matrix)  
+def QuizSystem():
+    # Students' answers to the questions
+    answers = [
+      ['A', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'],
+      ['D', 'B', 'A', 'B', 'C', 'A', 'E', 'E', 'A', 'D'],
+      ['E', 'D', 'D', 'A', 'C', 'B', 'E', 'E', 'A', 'D'],
+      ['C', 'B', 'A', 'E', 'D', 'C', 'E', 'E', 'A', 'D'],
+      ['A', 'B', 'D', 'C', 'C', 'D', 'E', 'E', 'A', 'D'],
+      ['B', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'],
+      ['B', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'],
+      ['E', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D']]
+      
+    # Key to the questions
+    keys = ['D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D']
+    
+    # Grade all answers
+    for i in range(len(answers)):
+        # Grade one student
+        correctCount = 0
+        for j in range(len(answers[i])): 
+            if answers[i][j] == keys[j]:
+                correctCount += 1
+
+        print("Student", i, "'s correct count is", correctCount,"/10")
+
+altanta = [714,1102,43,765,98,54,543]
 
 def max(num1, num2): 
     if num1 > num2:
@@ -178,7 +251,14 @@ if x==11:
     user_list = input_list.split()
     selectionSort(user_list)
     print (user_list) 
-
+if x==12:
+    twoDimentionList()
+if x==13:
+    ReadTableDatak()
+if x==14:
+    SumTable()
+if x==15:
+    QuizSystem()
 else:
     print("Error! Try Again....")
 
